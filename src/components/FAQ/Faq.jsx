@@ -14,7 +14,7 @@ import "./Faq.css";
 
 const Faq = () => {
 	return (
-		<div className="py-16 mt-10 md:flex gap-10 bg-white max-w-7xl mx-auto">
+		<div className="py-16 mt-10 md:flex gap-10 bg-white max-w-7xl mx-auto dark:bg-black">
 			<div className="w-[45%]">
 				<Image
 					width="300"

@@ -46,7 +46,7 @@ const Contact = () => {
 					<Image width={750} height={550} src={contactimage} alt="" />
 				</div>
 				<div className="lg:ms-10 md:ms-0 lg:w-[50%] md:w-[70%]">
-					<div className="bg-gray-50 border-4 p-8 border-green-400  shadow-2xl w-[90%] mx-auto" style={{ borderRadius: '0px 55px 0px 55px' }}>
+					<div className="bg-gray-50 border-4 p-8  dark:bg-black border-green-400  shadow-2xl w-[90%] mx-auto" style={{ borderRadius: '0px 55px 0px 55px' }}>
 						<form
 							className="w-[100%] justify-center mt-3"
 							ref={form}
