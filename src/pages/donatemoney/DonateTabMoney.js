@@ -4,7 +4,7 @@ const DonateTabMoney = ({product,onPriceClick }) => {
     // const {price}=product
     return (
         <div className='py-4 px-8  mx-auto border border-slate-300'>
-        <button onClick={() => onPriceClick(product?.price)}>$<span>{price}</span></button>
+        <button onClick={() => onPriceClick(product?.price || ' ')}>$<span>{price}</span></button>
     </div>
     );
 };
