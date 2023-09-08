@@ -4,7 +4,7 @@ import useCart from '@/hooks/useCart';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { FaShoppingCart, FaSignOutAlt, FaUserAlt, FaUsers } from 'react-icons/fa';
+import { FaDonate, FaHome, FaShoppingCart, FaSignOutAlt, FaUserAlt, FaUsers } from 'react-icons/fa';
 import { MdEventAvailable, MdEventNote } from 'react-icons/md';
 import { RiDashboard3Line, RiSettings3Fill } from "react-icons/ri"
 
@@ -63,6 +63,12 @@ const DashboardSidebar = () => {
                             </Link>
                         </li>
                         <li>
+                            <Link href="/dashboard/user-donate-money" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                <FaDonate className='text-2xl text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'></FaDonate>
+                                <span className="ml-3">Donate Money</span>
+                            </Link>
+                        </li>
+                        <li>
                             <Link href="/dashboard/userCart" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                                 <FaShoppingCart className='text-2xl text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'></FaShoppingCart>
                                 <span className="flex-1 ml-3 whitespace-nowrap">Cart <span className='rounded-lg p-1 bg-blue-400'>+{cartData.length || 0} </span> </span>
@@ -97,6 +103,13 @@ const DashboardSidebar = () => {
                             <Link href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                                 <FaSignOutAlt className='text-2xl text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white' />
                                 <span className="flex-1 ml-3 whitespace-nowrap">Logout</span>
+                            </Link>
+                        </li>
+                        <hr />
+                        <li>
+                            <Link href="/" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <FaHome className='text-2xl text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white' />
+                                <span className="flex-1 ml-3 whitespace-nowrap">Home</span>
                             </Link>
                         </li>
                     </ul>

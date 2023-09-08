@@ -53,10 +53,10 @@ const AllRolesPage = () => {
 											: "bg-white"
 									}
 								>
-									<td className="p-2">{index + 1}</td>
-									<td className="p-2">{user.name}</td>
-									<td className="p-2">{user.email}</td>
-									<td className="p-2 text-emerald-600 font-bold">{user.role}</td>
+									<td className="p-2 dark:text-black">{index + 1}</td>
+									<td className="p-2 dark:text-black">{user.name}</td>
+									<td className="p-2 dark:text-black">{user.email}</td>
+									<td className="p-2 dark:text-black text-emerald-600 font-bold">{user.role}</td>
 									
 								</tr>
 							))}

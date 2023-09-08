@@ -1,6 +1,7 @@
 'use client'
 
 import Star from "@/components/Store/Star/Star";
+import useAuth from "@/hooks/useAuth";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -8,7 +9,7 @@ import toast from "react-hot-toast";
 import { FaStore } from "react-icons/fa";
 
 const GetDetailItems = (props) => {
-
+    const {user}=useAuth()
     const [itemDetails, setItemDetails] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const [isDescriptionOpen, setIsDescriptionOpen] = useState(true);
@@ -51,9 +52,9 @@ const GetDetailItems = (props) => {
 
 
     const handleCart = async itemDetails => {
-        const cartItems = { itemId: itemDetails._id, name: itemDetails.name, itemImg: itemDetails.picture, category: itemDetails.category, price: itemDetails.price, ratings: itemDetails.ratings, description: itemDetails.description }
+        const cartItems = { itemId: itemDetails._id, name: itemDetails.name, itemImg: itemDetails.picture, category: itemDetails.category, price: itemDetails.price, ratings: itemDetails.ratings, description: itemDetails.description, email: user.email }
         console.log({ cartItems });
-        let result = await fetch("/api/cartforusers", {
+        let result = await fetch("/api/onlyuserscart", {
             method: "POST",
             body: JSON.stringify(cartItems)
         });
@@ -63,7 +64,6 @@ const GetDetailItems = (props) => {
         }
 
     }
-
 
 
 

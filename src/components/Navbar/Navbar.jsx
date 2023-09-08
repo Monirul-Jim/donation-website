@@ -167,7 +167,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-blue-900 dark:bg-black shadow-md text-white h-[65px] lg:h-[85px] flex fixed top-0 left-0 right-0 z-50">
+    <div  className="bg-blue-900 dark:bg-black shadow-md text-white h-[65px] lg:h-[85px] flex fixed top-0 left-0 right-0 z-50">
       <nav className="container mx-auto px-4 py-3 md:flex md:items-center md:justify-between">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
@@ -238,6 +238,7 @@ const Navbar = () => {
           >
             Home
           </Link>
+         
 
           {/* ------------------------------------------------------- */}
 
