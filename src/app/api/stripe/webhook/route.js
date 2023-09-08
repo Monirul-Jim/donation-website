@@ -7,7 +7,7 @@ import PostApi from "@/lib/model3/model3";
 
 export async function POST(req) {
   const body = await req.text();
-  const signature = headers().get("Stripe-Signature");
+  const signature = headers().get("stripe-signature");
 
   let event;
 
@@ -18,6 +18,7 @@ export async function POST(req) {
       process.env.STRIPE_WEBHOOK_SECRET
     );
   } catch (error) {
+    console.log(error);
     return new NextResponse(`Webhook Error: ${error.message}`, { status: 400 });
   }
 
