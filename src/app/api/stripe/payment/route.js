@@ -14,7 +14,7 @@ export async function POST(request) {
     const url = process.env.DOMAIN;
 
     const session = await stripe.checkout.sessions.create({
-      success_url: `${url}/dashboard`,
+      success_url: `${url}/dashboard/user-donate-money`,
       cancel_url: `${url}/`,
       mode: "payment",
       line_items: [

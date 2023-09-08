@@ -15,9 +15,8 @@
 import React from 'react';
 
 const DonateTabMoney = ({ product, onPriceClick }) => {
-  // Check if 'product' is defined before destructuring 'price'
   if (!product) {
-    return null; // or handle the case where 'product' is undefined
+    return null; 
   }
 
   const { price } = product;
